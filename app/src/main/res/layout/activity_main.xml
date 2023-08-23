@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+  <FrameLayout
+      android:id="@+id/fram"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      app:layout_anchor="@+id/fram"
+      app:layout_anchorGravity="start|center" />
+
+  <com.google.android.material.bottomappbar.BottomAppBar
+      android:id="@+id/bootappdar"
+      style="myButtonBackground"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      app:fabAlignmentMode="end"
+      app:fabAnimationMode="slide"
+      app:menu="@menu/menu_item"
+      app:navigationIcon="@drawable/baseline_menu_24" />
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/btn_add"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:backgroundTint="#75B0DF"
+      android:src="@drawable/baseline_add_24"
+      android:tint="@color/colorAccent"
+      app:layout_anchor="@id/bootappdar"
+      app:maxImageSize="@dimen/_20sdp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
